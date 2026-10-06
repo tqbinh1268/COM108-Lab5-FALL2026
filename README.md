@@ -24,20 +24,20 @@ cd COM108-Lab5-<MaSinhVien>
 > [!TIP]
 > Thực hiện tuần tự: **Hoàn thiện Bài 1 $\rightarrow$ Push & Nhận trạng thái $\rightarrow$ Ghi log $\rightarrow$ Xanh mới chuyển sang Bài 2.**
 
-#### Thực hiện Bài (Tối đa 3-4 lần push/bài)
+#### Bước 1: Code và Ghi Log
 1. Viết code hoàn thiện các hàm trong file `.c`.
 2. Ghi nhật ký vào `LOGBOOK.md` trước khi push.
-3. Chạy lệnh:
+3. Chạy lệnh nộp bài:
 ```bash
 git add src LOGBOOK.md
 git commit -m "Nop bai..."
 git push origin main
 ```
 
-#### Đọc trạng thái phản hồi từ GitHub
+#### Bước 2: Đọc trạng thái phản hồi từ GitHub
 Ngay sau khi push, tải lại trang GitHub cá nhân:
 * 🟡 **Đang chấm:** Đợi 15 – 30 giây.
-* ✅ **Đạt (Pass):** Cập nhật `LOGBOOK.md` thành "Xanh", chuyển bài tiếp theo.
+* ✅ **Đạt (Pass):** Cập nhật `LOGBOOK.md` thành "Xanh", chuyển sang bài tiếp theo.
 * ❌ **Lỗi (Failed):** 
   1. Bấm vào ❌ $\rightarrow$ **Details** đọc lỗi.
   2. Ghi lỗi vào `LOGBOOK.md`.
@@ -63,17 +63,17 @@ Ngay sau khi push, tải lại trang GitHub cá nhân:
 > [!IMPORTANT]
 > **QUY TẮC BẤT BIẾN:** Tuyệt đối không thay đổi tên hàm, kiểu dữ liệu trả về và thứ tự tham số trong các file mẫu (`src/bai1.c`, `bai2.c`, `bai3.c`).
 
-1. **Quy định lập trình:**
-   - Được phép sử dụng AI (Cursor, Copilot, ChatGPT, Claude...) để hỗ trợ phân tích và viết code.
-   - **Cấm biến toàn cục (`global variables`):** Toàn bộ dữ liệu trao đổi giữa các hàm phải thông qua tham số hoặc giá trị trả về (`return`).
+* **Quy định lập trình:**
+  * Được phép sử dụng AI (Cursor, Copilot, ChatGPT, Claude...) để hỗ trợ phân tích và viết code.
+  * **Cấm biến toàn cục (`global variables`):** Toàn bộ dữ liệu trao đổi giữa các hàm phải thông qua tham số hoặc giá trị trả về (`return`).
 
 > [!WARNING]
 > **Hạn ngạch đẩy bài (Luật 10-Push):** Toàn bộ bài Lab 5 được cấp tối đa **10 lần push**.
-> - **Bài 1:** Tối đa 3 lần push.
-> - **Bài 2:** Tối đa 3 lần push.
-> - **Bài 3:** Tối đa 4 lần push.
-> - *Hệ thống sẽ tự động khóa kiểm tra nếu vượt quá hạn ngạch.*
-> - *Mỗi lần đẩy bài (`push`) bắt buộc phải ghi nhận vào tệp `LOGBOOK.md`.*
+> * **Bài 1:** Tối đa 3 lần push.
+> * **Bài 2:** Tối đa 3 lần push.
+> * **Bài 3:** Tối đa 4 lần push.
+> * *Hệ thống sẽ tự động khóa kiểm tra nếu vượt quá hạn ngạch.*
+> * *Mỗi lần đẩy bài (`push`) bắt buộc phải ghi nhận vào tệp `LOGBOOK.md`.*
 
 ---
 
@@ -81,20 +81,22 @@ Ngay sau khi push, tải lại trang GitHub cá nhân:
 
 #### Bài 1: Module Kiểm Định Năng Lượng Trạm Sạc (`src/bai1.c`)
 Một trạm sạc xe điện thông minh yêu cầu module xử lý dữ liệu sạc:
-* **Hàm kiểm định sản lượng (đơn vị: Wh):** Sử dụng vòng lặp `do...while`: chỉ chấp nhận giá trị $Wh > 0$. Nếu sai ($\le 0$), yêu cầu nhập lại. Trả về Wh hợp lệ.
-* **Hàm quy đổi điện năng:** Nhận số Wh, trả về số Kilowatt-giờ (kWh) tương ứng ($1\text{ kWh} = 1000\text{ Wh}$).
-* **Hàm tính cước phí:** Nhận số kWh đã nạp và đơn giá, trả về tổng tiền.
-* **Tại hàm `main()`:** Gọi 3 hàm trên và in ra màn hình: Wh đã sạc, kWh (2 chữ số thập phân), Tổng cước phí.
+* **Hàm kiểm định sản lượng (đơn vị: Wh):** Sử dụng vòng lặp `do...while`: chỉ chấp nhận giá trị `Wh > 0`. Nếu sai (`<= 0`), yêu cầu nhập lại. Trả về `Wh` hợp lệ.
+* **Hàm quy đổi điện năng:** Nhận số `Wh`, trả về số Kilowatt-giờ (`kWh`) tương ứng (`1 kWh = 1000 Wh`).
+* **Hàm tính cước phí:** Nhận số `kWh` đã nạp và đơn giá, trả về tổng tiền.
+* **Tại hàm `main()`:** Gọi 3 hàm trên và in ra màn hình: `Wh` đã sạc, `kWh` (2 chữ số thập phân), Tổng cước phí.
 
 #### Bài 2: Hệ Thống Giao Dịch & Hoàn Tiền Ví Điện Tử (`src/bai2.c`)
 * **Nghiệp vụ giao dịch:** Nhận số dư ví, số tiền hóa đơn, tỷ lệ hoàn tiền.
-  * Nếu $soDu < tongTien$: Thất bại, trả về `0`. Tiền hoàn = 0.
+  * Nếu `soDu < tongTien`: Thất bại, trả về `0`. Tiền hoàn = 0.
   * Nếu đủ điều kiện: Trừ hóa đơn, cộng tiền cashback vào ví. Trả về `1`.
+
 > [!IMPORTANT]
 > **Ràng buộc:** Biến số dư ví và biến tiền hoàn khai báo tại `main()` **bắt buộc phải tự động cập nhật giá trị mới nhất** sau khi kết thúc hàm (Sử dụng tham chiếu/con trỏ).
 
 #### Bài 3: Phân Phối Tiền Mặt ATM Tối Ưu Mệnh Giá (`src/bai3.c`)
 * **Nghiệp vụ phân phối:** Nhập số tiền cần rút tại `main()`. Yêu cầu: Là bội số của 50.000 VNĐ.
 * Hàm phân phối tiền (500k, 200k, 100k, 50k) sao cho **tổng số tờ tiền là ít nhất**. Ghi trực tiếp số lượng từng tờ vào 4 biến đếm tại `main()`. Trả về tổng số tờ.
+
 > [!CAUTION]
 > **Tuyệt đối không sử dụng lệnh in (`printf`) bên trong hàm tính toán phân phối tiền.** Mọi thao tác xuất số lượng tờ tiền phải nằm ở `main()`.
