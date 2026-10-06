@@ -1,21 +1,19 @@
 #include <stdio.h>
 
-// Hàm kiểm định sản lượng (đơn vị: Wh)
+/* 
+ * BÀI 1: Module Kiểm Định Năng Lượng Trạm Sạc
+ * Quy tắc: Tuyệt đối không thay đổi tên hàm, kiểu trả về và tham số.
+ * Yêu cầu: Sử dụng vòng lặp do...while để kiểm tra, chỉ nhận giá trị > 0.
+ */
+
 int kiemDinhSanLuong() {
-    int wh;
-    do {
-        printf("Nhap san luong (Wh): ");
-        scanf("%d", &wh);
-        if (wh <= 0) {
-            printf("Loi: San luong phai lon hon 0. Vui long nhap lai.\n");
-        }
-    } while (wh <= 0);
-    return wh;
+    // TODO: Sinh viên viết code tại đây
+    
+    return 0; // Thay đổi giá trị return cho phù hợp
 }
 
 int main() {
-    // Gọi hàm kiểm định sản lượng
-    int sanLuongHople = kiemDinhSanLuong();
-    printf("San luong hop le duoc ghi nhan: %d Wh\n", sanLuongHople);
+    // TODO: Sinh viên viết code kiểm thử (gọi hàm) tại đây
+    
     return 0;
 }
