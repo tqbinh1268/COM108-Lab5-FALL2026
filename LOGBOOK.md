@@ -1,19 +1,31 @@
-# LOGBOOK - LAB 5
+# NHẬT KÝ THỰC HIỆN LAB 5 (LOGBOOK)
 
-> **Sinh viên lưu ý:** Mỗi lần đẩy bài (push) bắt buộc phải ghi nhận vào tệp này.
-> Tổng cộng có tối đa 10 lần push cho toàn bộ Lab 5.
+* **Họ và tên:** 
+* **Mã sinh viên:** 
+* **Link Repository cá nhân:** 
 
-## Bảng ghi nhận quá trình làm bài
+---
 
-| Lần Push | Bài tập | Tóm tắt ngắn gọn phần code đã thêm / chỉnh sửa |
-| :---: | :--- | :--- |
-| 1 | Bài 1 | (Ví dụ: Đã hoàn thành khung vòng lặp do...while) |
-| 2 | | |
-| 3 | | |
-| 4 | | |
-| 5 | | |
-| 6 | | |
-| 7 | | |
-| 8 | | |
-| 9 | | |
-| 10 | | |
+### Lần 1: Bài 1
+- Trạng thái: Chờ chấm
+- Ghi chú: 
+
+### Lần 2: Bài 1
+- Trạng thái: 
+- Lỗi/Cách sửa: 
+
+### Lần 3: Bài 2
+- Trạng thái: 
+- Lỗi/Cách sửa: 
+
+### Lần 4: Bài 2
+- Trạng thái: 
+- Lỗi/Cách sửa: 
+
+### Lần 5: Bài 3
+- Trạng thái: 
+- Lỗi/Cách sửa: 
+
+### Lần 6: Bài 3
+- Trạng thái: 
+- Lỗi/Cách sửa:
