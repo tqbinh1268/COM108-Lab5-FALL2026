@@ -58,7 +58,7 @@ Ngay sau khi push, tải lại trang GitHub cá nhân:
 
 ## PHẦN 2: NỘI DUNG CHI TIẾT CÁC BÀI TẬP
 
-### I. Quy tắc làm bài bắt buộc
+### Quy tắc làm bài bắt buộc
 
 > [!IMPORTANT]
 > **QUY TẮC BẤT BIẾN:** Tuyệt đối không thay đổi tên hàm, kiểu dữ liệu trả về và thứ tự tham số trong các file mẫu (`src/bai1.c`, `bai2.c`, `bai3.c`).
