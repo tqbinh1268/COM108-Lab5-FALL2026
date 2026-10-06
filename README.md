@@ -63,11 +63,7 @@ Ngay sau khi push, tải lại trang GitHub cá nhân:
 > [!IMPORTANT]
 > **QUY TẮC BẤT BIẾN:** Tuyệt đối không thay đổi tên hàm, kiểu dữ liệu trả về và thứ tự tham số trong các file mẫu (`src/bai1.c`, `bai2.c`, `bai3.c`).
 
-1. **Khởi tạo bài làm:**
-   - Sinh viên tạo repository cá nhân từ Template mẫu của giảng viên và clone về máy.
-   - Khung chương trình chuẩn, định nghĩa kiểu dữ liệu và khuôn mẫu hàm (Function Prototype / Interface) đã được chuẩn bị sẵn.
-
-2. **Quy định lập trình:**
+1. **Quy định lập trình:**
    - Được phép sử dụng AI (Cursor, Copilot, ChatGPT, Claude...) để hỗ trợ phân tích và viết code.
    - **Cấm biến toàn cục (`global variables`):** Toàn bộ dữ liệu trao đổi giữa các hàm phải thông qua tham số hoặc giá trị trả về (`return`).
 
