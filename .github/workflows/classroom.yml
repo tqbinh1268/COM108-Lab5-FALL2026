@@ -1,0 +1,42 @@
+name: Autograding Test Lab 5
+
+on: [push]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout mã nguồn
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: 1. Kiểm tra hạn ngạch 10-Push
+        run: |
+          COMMIT_COUNT=$(git rev-list --count HEAD)
+          echo "So lan push hien tai: $COMMIT_COUNT"
+          if [ "$COMMIT_COUNT" -gt 11 ]; then
+            echo "::error::QUOTA EXCEEDED! Ban da push qua 10 lan quy dinh cho Lab 5. He thong da khoa cham diem!"
+            exit 1
+          fi
+
+      - name: 2. Kiểm tra cập nhật LOGBOOK.md
+        run: |
+          if ! git diff --name-only HEAD~1 HEAD | grep -q "LOGBOOK.md"; then
+            echo "::warning::Commit nay ban chua cap nhat file LOGBOOK.md! Hay cap nhat nhat ky hoc tap."
+          fi
+
+      - name: 3. Chạy Test Bài 1 (Xe điện)
+        run: |
+          gcc -Wall tests/test_bai1.c -o test1
+          ./test1
+
+      - name: 4. Chạy Test Bài 2 (Ví điện tử)
+        run: |
+          gcc -Wall tests/test_bai2.c -o test2
+          ./test2
+
+      - name: 5. Chạy Test Bài 3 (Rút tiền ATM)
+        run: |
+          gcc -Wall tests/test_bai3.c -o test3
+          ./test3
