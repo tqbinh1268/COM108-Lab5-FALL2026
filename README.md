@@ -77,7 +77,7 @@ Ngay sau khi push, tải lại trang GitHub cá nhân:
 
 ---
 
-### II. Đặc tả chi tiết các bài tập
+## YÊU CẦU LAB 5
 
 #### Bài 1: Module Kiểm Định Năng Lượng Trạm Sạc (`src/bai1.c`)
 Một trạm sạc xe điện thông minh yêu cầu module xử lý dữ liệu sạc:
