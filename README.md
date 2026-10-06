@@ -7,7 +7,56 @@
 
 ---
 
-## PHẦN 1: NỘI DUNG CHI TIẾT CÁC BÀI TẬP
+## PHẦN 1: HƯỚNG DẪN BẮT ĐẦU VÀ NỘP BÀI (QUY TRÌNH MỚI)
+
+### 1. Tải kho bài tập về máy (Clone)
+1. Truy cập vào **đường link Repository** giảng viên cấp.
+2. Nhấn nút màu xanh **"Use this template"** $\rightarrow$ **"Create a new repository"**.
+3. Thiết lập: **Repository name:** `COM108-Lab5-<MaSinhVien>` | **Visibility:** `Public` $\rightarrow$ Bấm **Create repository**.
+4. Lấy link HTTPS và chạy lệnh Terminal:
+```bash
+git clone <link_https_vua_copy>
+cd COM108-Lab5-<MaSinhVien>
+```
+
+### 2. Quy trình làm từng bài & Đẩy lên GitHub (Push)
+
+> [!TIP]
+> Thực hiện tuần tự: **Hoàn thiện Bài 1 $\rightarrow$ Push & Nhận trạng thái $\rightarrow$ Ghi log $\rightarrow$ Xanh mới chuyển sang Bài 2.**
+
+#### Thực hiện Bài (Tối đa 3-4 lần push/bài)
+1. Viết code hoàn thiện các hàm trong file `.c`.
+2. Ghi nhật ký vào `LOGBOOK.md` trước khi push.
+3. Chạy lệnh:
+```bash
+git add src LOGBOOK.md
+git commit -m "Nop bai..."
+git push origin main
+```
+
+#### Đọc trạng thái phản hồi từ GitHub
+Ngay sau khi push, tải lại trang GitHub cá nhân:
+* 🟡 **Đang chấm:** Đợi 15 – 30 giây.
+* ✅ **Đạt (Pass):** Cập nhật `LOGBOOK.md` thành "Xanh", chuyển bài tiếp theo.
+* ❌ **Lỗi (Failed):** 
+  1. Bấm vào ❌ $\rightarrow$ **Details** đọc lỗi.
+  2. Ghi lỗi vào `LOGBOOK.md`.
+  3. Sửa code trên máy rồi push lại.
+
+---
+
+### Bảng tra cứu hành động
+
+| Trạng thái | Ý nghĩa | Hành động tiếp theo |
+| :---: | --- | --- |
+| 🟡 | **Đang chấm** | Đợi 15 – 30s rồi F5 lại trang. |
+| ✅ | **Pass** | Ghi Log "Xanh" $\rightarrow$ Làm bài tiếp theo. |
+| ❌ | **Failed** | Bấm **Details** đọc lỗi $\rightarrow$ Ghi Log lỗi $\rightarrow$ Sửa code $\rightarrow$ Push lại. |
+| ⛔ | **QUOTA EXCEEDED** | Khóa nộp bài do push quá số lần. Báo cáo giảng viên. |
+
+---
+
+## PHẦN 2: NỘI DUNG CHI TIẾT CÁC BÀI TẬP
 
 ### I. Quy tắc làm bài bắt buộc
 
@@ -53,52 +102,3 @@ Một trạm sạc xe điện thông minh yêu cầu module xử lý dữ liệu
 * Hàm phân phối tiền (500k, 200k, 100k, 50k) sao cho **tổng số tờ tiền là ít nhất**. Ghi trực tiếp số lượng từng tờ vào 4 biến đếm tại `main()`. Trả về tổng số tờ.
 > [!CAUTION]
 > **Tuyệt đối không sử dụng lệnh in (`printf`) bên trong hàm tính toán phân phối tiền.** Mọi thao tác xuất số lượng tờ tiền phải nằm ở `main()`.
-
----
-
-## PHẦN 2: HƯỚNG DẪN BẮT ĐẦU VÀ NỘP BÀI (QUY TRÌNH MỚI)
-
-> [!TIP]
-> Thực hiện tuần tự: **Hoàn thiện Bài 1 $\rightarrow$ Push & Nhận trạng thái $\rightarrow$ Ghi log $\rightarrow$ Xanh mới chuyển sang Bài 2.**
-
-### 1. Tải kho bài tập về máy (Clone)
-1. Truy cập vào **đường link Repository** giảng viên cấp.
-2. Nhấn nút màu xanh **"Use this template"** $\rightarrow$ **"Create a new repository"**.
-3. Thiết lập: **Repository name:** `COM108-Lab5-<MaSinhVien>` | **Visibility:** `Public` $\rightarrow$ Bấm **Create repository**.
-4. Lấy link HTTPS và chạy lệnh Terminal:
-```bash
-git clone <link_https_vua_copy>
-cd COM108-Lab5-<MaSinhVien>
-```
-
-### 2. Quy trình làm từng bài & Đẩy lên GitHub (Push)
-
-#### Thực hiện Bài (Tối đa 3-4 lần push/bài)
-1. Viết code hoàn thiện các hàm trong file `.c`.
-2. Ghi nhật ký vào `LOGBOOK.md` trước khi push.
-3. Chạy lệnh:
-```bash
-git add src LOGBOOK.md
-git commit -m "Nop bai..."
-git push origin main
-```
-
-#### Đọc trạng thái phản hồi từ GitHub
-Ngay sau khi push, tải lại trang GitHub cá nhân:
-* 🟡 **Đang chấm:** Đợi 15 – 30 giây.
-* ✅ **Đạt (Pass):** Cập nhật `LOGBOOK.md` thành "Xanh", chuyển bài tiếp theo.
-* ❌ **Lỗi (Failed):** 
-  1. Bấm vào ❌ $\rightarrow$ **Details** đọc lỗi.
-  2. Ghi lỗi vào `LOGBOOK.md`.
-  3. Sửa code trên máy rồi push lại.
-
----
-
-### Bảng tra cứu hành động
-
-| Trạng thái | Ý nghĩa | Hành động tiếp theo |
-| :---: | --- | --- |
-| 🟡 | **Đang chấm** | Đợi 15 – 30s rồi F5 lại trang. |
-| ✅ | **Pass** | Ghi Log "Xanh" $\rightarrow$ Làm bài tiếp theo. |
-| ❌ | **Failed** | Bấm **Details** đọc lỗi $\rightarrow$ Ghi Log lỗi $\rightarrow$ Sửa code $\rightarrow$ Push lại. |
-| ⛔ | **QUOTA EXCEEDED** | Khóa nộp bài do push quá số lần. Báo cáo giảng viên. |
