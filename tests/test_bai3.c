@@ -14,7 +14,7 @@ int main() {
         char line[256];
         int inHam = 0;
         while (fgets(line, sizeof(line), f)) {
-            if (strstr(line, "int phanPhoiATM")) inHam = 1;
+            if (strstr(line, "SINH VIÊN VIẾT CODE")) inHam = 1;
             if (inHam && strstr(line, "printf")) {
                 printf("FAILED Kien truc: Phat hien lenh 'printf' nam ben trong ham phanPhoiATM!\n");
                 printf("--> YEU CAU: Ham chi thuc hien tinh toan va gan vao con tro, in an phai nam o main!\n");
