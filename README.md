@@ -51,9 +51,10 @@ Thực hiện tuần tự: **Hoàn thiện Bài 1 $\rightarrow$ Push & Nhận tr
 
 ### 1. Tải kho bài tập về máy (Clone)
 
-1. Bấm vào đường link GitHub Classroom của lớp $\rightarrow$ Bấm nút xanh "**Accept this assignment**".
-2. Khi repo tạo xong, copy đường link HTTPS (dạng `https://github.com/.../lab5-mssv.git`).
-3. Mở **VS Code**, bật Terminal (Ctrl + ~) và chạy lệnh:
+1. Truy cập vào đường link Repository bài tập do giảng viên cung cấp.
+2. Bấm nút màu xanh **"Use this template"** $\rightarrow$ chọn **"Create a new repository"** để tạo bản sao bài tập về tài khoản GitHub của bạn. (Đặt tên repo theo cú pháp `Lab5-MSSV`).
+3. Khi repo cá nhân tạo xong, copy đường link HTTPS (dạng `https://github.com/.../Lab5-MSSV.git`).
+4. Mở **VS Code**, bật Terminal (Ctrl + ~) và chạy lệnh:
    ```bash
    git clone <link_repo_vua_copy>
    cd <ten_thu_muc_repo>
