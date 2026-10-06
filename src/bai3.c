@@ -32,7 +32,7 @@ int main() {
 // --- SINH VIÊN VIẾT CODE CỦA HÀM DƯỚI ĐÂY ---
 int phanPhoiATM(int soTien, int *to500, int *to200, int *to100, int *to50) {
     // TODO: Viết code phân phối số tờ tiền và trả về tổng số tờ
-    // Yêu cầu: Tuyệt đối không dùng lệnh printf bên trong hàm này
+    // Yeu cau: Tuyet doi khong dung lenh in ra man hinh ben trong ham nay
     
     return 0;
 }

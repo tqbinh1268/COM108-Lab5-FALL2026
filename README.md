@@ -1,7 +1,6 @@
 # YÊU CẦU LAB 5 - COM108 (CẬP NHẬT 2026)
 
-* **Môn học:** Nhập môn Lập trình với C (PRF192 / COM108)
-* **Thời lượng:** Thực hiện trong buổi học
+* **Môn học:** Nhập môn Lập trình với C (COM108)
 * **Hình thức nộp bài:** Sử dụng GitHub Template, đẩy mã nguồn (`git push`) và tự động kiểm thử qua GitHub Actions trên repository cá nhân.
 
 ---
